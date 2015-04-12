@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Mapper.java namespace -->
+<mapper namespace="com.bizarq.sgt.mapper.PersonaMapper">
+	<!-- Person.java namespace -->
+	<resultMap type="com.bizarq.sgt.domain.Person" id="Person">
+		<!-- map table "person"column to class "Person" property -->
+		<id column="ID" property="id" />
+		<result property="name" column="name" />
+		<result property="country" column="country" />
+	</resultMap>
+
+	<select id="selectAllPerson" resultMap="Person">
+		SELECT * FROM person
+	</select>
+</mapper>
